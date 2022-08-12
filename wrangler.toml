@@ -10,3 +10,6 @@ compatibility_date = "2022-04-05"
 
 [build]
   command = "npm run build"
+
+[dev]
+port = 3000

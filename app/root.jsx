@@ -16,7 +16,7 @@ export function links() {
 
 export const meta = () => ({
   charset: "utf-8",
-  title: "New Remix App",
+  title: "DOT Lake Village",
   viewport: "width=device-width,initial-scale=1",
 });
 
@@ -29,7 +29,13 @@ export default function App() {
         <Links />
       </head>
 
-      <body className=" font-noto ">
+      <body
+        className=" font-noto bg-dotOrange "
+        ondragstart="return false;"
+        ondrop="return false;"
+        oncontextmenu="return false;"
+        oncopy="return false;"
+      >
         <Layout>
           <Outlet />
         </Layout>

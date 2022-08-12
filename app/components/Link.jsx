@@ -1,10 +1,8 @@
-import { NavLink, useLocation } from "@remix-run/react";
+import { NavLink } from "@remix-run/react";
 
-const Link = ({ children, to }) => {
-  const location = useLocation();
-  console.log(location);
+const Link = ({ children, to, ...props }) => {
   return (
-    <NavLink to={to} className=" text-white text-xl font-medium ">
+    <NavLink to={to} className=" text-white text-xl font-medium " {...props}>
       {children}
     </NavLink>
   );
