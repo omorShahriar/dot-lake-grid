@@ -1,27 +1,34 @@
 import { useLoaderData } from "@remix-run/react";
 import { json } from "@remix-run/cloudflare";
+
 import { supabase } from "~/utils/supabase";
 import { Container } from "~/components/Container";
-import Button from "~/components/Button";
+import { cache } from "~/utils/cache";
+import { HomeSlider, links as sliderStyles } from "~/components/HomeSlider";
 
+export const links = () => [...sliderStyles()];
 export async function loader() {
+  if (await cache.has("imageData")) return json(await cache.get("imageData"));
+
   const { data } = await supabase.storage.from("images").list("home-slider");
   const imagePaths = data.map((img) => `home-slider/${img.name}`);
   const imageLinks = await supabase.storage
     .from("images")
-    .createSignedUrls(imagePaths, 60);
+    .createSignedUrls(imagePaths, 3600);
 
   const imageData = imageLinks.data.map((img) => ({
     name: img.path.split("/")[1].split(".")[0],
     url: img.signedURL,
   }));
 
+  await cache.set("imageData", imageData);
+
   return json(imageData);
 }
 
 export default function Index() {
   const data = useLoaderData();
-  console.log(data);
+
   return (
     <div className="  pt-56  ">
       <section>
@@ -102,9 +109,13 @@ export default function Index() {
       </section>
       <section>
         <Container>
-          <p className=" mt-10 text-6xl text-center ">
-            slider to be implemented
-          </p>
+          <div className="relative mt-64">
+            {" "}
+            <h2 className="absolute top-0 left-0 z-10 text-6xl font-medium max-w-md border-l-black border-l-4 ml-8 pl-12 py-28  ">
+              Our History, Our Memories.
+            </h2>
+            <HomeSlider imageUrls={data} />
+          </div>
         </Container>
       </section>
       <section>

@@ -12,10 +12,6 @@ const Header = () => {
       <h2 className="  text-6xl font-medium transition-all duration-300  ">
         01 / Audio Title
       </h2>
-      <p className="  text-xl  ">
-        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-        nonumy.
-      </p>
     </div>
   );
 };

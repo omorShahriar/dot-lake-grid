@@ -1,6 +1,6 @@
 import { Link as RemixLink, useLocation } from "@remix-run/react";
 
-import Button from "./Button";
+import { LinkButton } from "./Button";
 import Link from "./Link";
 const Header = () => {
   const { pathname } = useLocation();
@@ -35,10 +35,10 @@ const Header = () => {
             </Link>
           </li>
           <li>
-            <Link to="/archives">Archives</Link>
+            <Link to="/archives/images">Archives</Link>
           </li>
           <li>
-            <Button to="https://teejuh.org/">Teejuh</Button>
+            <LinkButton to="https://teejuh.org/">Teejuh</LinkButton>
           </li>
         </ul>
       </nav>

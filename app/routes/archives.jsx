@@ -1,5 +1,5 @@
 import { Outlet } from "@remix-run/react";
-import Button from "~/components/Button";
+import { LinkButton } from "~/components/Button";
 
 export default function Archives() {
   return (
@@ -11,12 +11,12 @@ export default function Archives() {
       </section>
       <section>
         <div className=" flex justify-center items-center py-24 ">
-          <Button to="images" normal={false}>
+          <LinkButton to="images" normal={false}>
             Images
-          </Button>
-          <Button to="audio" normal={false}>
+          </LinkButton>
+          <LinkButton to="audio" normal={false}>
             Audio
-          </Button>
+          </LinkButton>
         </div>
         <div>
           <Outlet />

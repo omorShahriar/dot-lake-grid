@@ -1,6 +1,11 @@
 import { NavLink as Link } from "@remix-run/react";
 
-const Button = ({ to = "/", children, invert = false, normal = true }) => {
+export const LinkButton = ({
+  to = "/",
+  children,
+  invert = false,
+  normal = true,
+}) => {
   return normal ? (
     <a
       href={to}
@@ -18,5 +23,3 @@ const Button = ({ to = "/", children, invert = false, normal = true }) => {
     </Link>
   );
 };
-
-export default Button;

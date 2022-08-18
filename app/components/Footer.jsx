@@ -1,5 +1,5 @@
 import { Container } from "./Container";
-import Button from "./Button";
+import { LinkButton } from "./Button";
 const Footer = () => {
   return (
     <>
@@ -17,7 +17,7 @@ const Footer = () => {
                 If you have any memory from Dot Lake Village that you would like
                 to share, contact us: we are eager to share it with our people.
               </p>
-              <Button to="#">Contact Us</Button>
+              <LinkButton to="#">Contact Us</LinkButton>
             </div>
           </div>
         </Container>
