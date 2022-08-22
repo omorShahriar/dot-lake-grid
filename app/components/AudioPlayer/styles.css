@@ -11,7 +11,7 @@
 }
 
 .rhap_header {
-  top: 0;
+  top: 20%;
   left: 6.5%;
   position: absolute;
   z-index: 10;
@@ -124,7 +124,7 @@
   order: -1;
   display: flex;
   justify-content: right;
-  padding-bottom: 60px;
+  padding-bottom: 50px;
 }
 
 .rhap_additional-controls {

@@ -1,10 +1,9 @@
 import { useState, useEffect } from "react";
 import { useLoaderData, useFetcher } from "@remix-run/react";
+import { cache } from "~/utils/cache";
 import { json } from "@remix-run/cloudflare";
 import { Container } from "~/components/Container";
 import { getImages } from "~/utils/galleryApi";
-
-import { cache } from "~/utils/cache";
 
 export async function loader({ request }) {
   const url = new URL(request.url);
@@ -20,10 +19,10 @@ export async function loader({ request }) {
   }
 
   if ((await cache.has("leftColumn")) && (await cache.has("rightColumn")))
-    return json({
+    return {
       leftColumn: await cache.get("leftColumn"),
       rightColumn: await cache.get("rightColumn"),
-    });
+    };
 
   const leftColumn = await getImages("left-column", 8);
   const rightColumn = await getImages("right-column", 6);

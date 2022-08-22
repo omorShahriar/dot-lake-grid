@@ -6,24 +6,24 @@ export const links = () => {
   return [{ rel: "stylesheet", href: styles }];
 };
 
-const Header = () => {
+const Header = ({ title }) => {
   return (
-    <div className="flex gap-y-5 flex-col">
+    <div className="">
       <h2 className="  text-6xl font-medium transition-all duration-300  ">
-        01 / Audio Title
+        {title}
       </h2>
     </div>
   );
 };
 
-export const Player = () => {
+export const Player = ({ src, title }) => {
   return (
     <>
       <AudioPlayer
-        src="https://ymcbammfxvergxwancnw.supabase.co/storage/v1/object/sign/audio/Doris-Charles.mp3?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJhdWRpby9Eb3Jpcy1DaGFybGVzLm1wMyIsImlhdCI6MTY2MDI4Nzk2NiwiZXhwIjoxOTc1NjQ3OTY2fQ.yqqWIVcRhDepItnb8By_ClkJDB-EM905diNsvoX8LqI&t=2022-08-12T07%3A05%3A57.242Z"
+        src={src}
         showJumpControls={false}
         showDownloadProgress={false}
-        header={<Header />}
+        header={<Header title={title} />}
         customIcons={{ play: <PlayButton />, pause: <PauseButton /> }}
         preload="none"
         // other props here

@@ -67,18 +67,7 @@ export default function Index() {
               never be known.
             </p>
           </div>
-          <div className=" mt-32 grid grid-cols-12 gap-x-4 ">
-            <div className=" col-span-8 mr-16  ">
-              <img
-                src="/index-gallery-1.jpg"
-                alt="sidewalks around the moris thompson center"
-              />
-            </div>
-            <div className=" col-span-4 mr-10 mt-[72px] ">
-              {" "}
-              <img src="/index-gallery-2.jpg" alt="statue" />
-            </div>
-          </div>
+
           <h2 className=" font-medium text-6xl leading-tight mt-40 max-w-2xl ">
             Where is Dot Lake Village located?
           </h2>
