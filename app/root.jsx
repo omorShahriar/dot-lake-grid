@@ -25,16 +25,15 @@ export default function App() {
     <html lang="en">
       <head>
         <Meta />
-
         <Links />
       </head>
 
       <body
         className=" font-noto bg-dotOrange "
-        ondragstart="return false;"
-        ondrop="return false;"
-        oncontextmenu="return false;"
-        oncopy="return false;"
+        onDragStart={(e) => e.preventDefault()}
+        onDrop={(e) => e.preventDefault()}
+        onContextMenu={(e) => e.preventDefault()}
+        onCopy={(e) => e.preventDefault()}
       >
         <Layout>
           <Outlet />

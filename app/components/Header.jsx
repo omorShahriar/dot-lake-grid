@@ -14,7 +14,7 @@ const Header = () => {
   return (
     <header
       className={`z-50 w-full fixed top-0 left-0 ${
-        pathCheck ? "bg-transparent" : "bg-dotOrange"
+        pathCheck ? " bg-dotOrange  lg:bg-transparent" : "bg-dotOrange"
       }  pt-10 pb-14 px-10`}
     >
       <nav className=" flex justify-between items-center ">
