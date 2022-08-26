@@ -2,6 +2,7 @@ import { Link as RemixLink, useLocation } from "@remix-run/react";
 
 import { LinkButton } from "./Button";
 import Link from "./Link";
+import MobileNav from "./MobileNav";
 const Header = () => {
   const { pathname } = useLocation();
   let pathCheck = false;
@@ -15,9 +16,9 @@ const Header = () => {
     <header
       className={`z-50 w-full fixed top-0 left-0 ${
         pathCheck ? " bg-dotOrange  lg:bg-transparent" : "bg-dotOrange"
-      }  pt-10 pb-14 px-10`}
+      }  md:pt-10 md:pb-14 py-8 px-10`}
     >
-      <nav className=" flex justify-between items-center ">
+      <nav className=" hidden md:flex justify-between items-center ">
         <div className=" w-20 h-20  ">
           <RemixLink to="/">
             <img
@@ -42,6 +43,7 @@ const Header = () => {
           </li>
         </ul>
       </nav>
+      <MobileNav />
     </header>
   );
 };

@@ -100,7 +100,7 @@ export default function Index() {
         <Container>
           <div className="relative lg:mt-64 mt-32">
             {" "}
-            <h2 className="absolute top-0 left-0 z-10 lg:text-6xl text-[40px] lg:mx-0  font-medium md:max-w-md max-w-[276px] md:border-l-black md:border-l-4 ml-8  md:pl-12 md:py-28  ">
+            <h2 className="absolute top-0 left-0 z-10 lg:text-6xl text-[40px]   font-medium md:max-w-md max-w-[276px] md:border-l-black md:border-l-4 ml-8  md:pl-12 md:py-28  ">
               Our History, Our Memories.
             </h2>
             <HomeSlider imageUrls={data} />

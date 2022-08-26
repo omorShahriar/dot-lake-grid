@@ -7,17 +7,17 @@ const Footer = () => {
       <section className=" lg:mb-44 mb-24 ">
         <Container>
           <div className="lg:mt-56 mt-36 flex items-center justify-center flex-col lg:flex-row ">
-            <div className=" mb-12 lg:mb-0 pb-12 lg:pb-0 lg:pt-12 lg:pl-16 lg:pr-8 text-right lg:border-r-2 lg:border-r-black border-b-2 border-b-black lg:mx-0 mx-4">
-              <h2 className=" text-left max-w-xl text-6xl font-medium  lg:text-6xl text-[40px]  leading-tight lg:mt-40   ">
+            <div className=" mb-12 lg:mb-0 pb-12 lg:pb-0 lg:pt-12  lg:pr-8 text-right lg:border-r-2 lg:border-r-black lg:border-b-0 border-b-2 border-b-black lg:mx-0 mx-4">
+              <h2 className=" lg:text-right text-left max-w-xl text-6xl font-medium  lg:text-6xl text-[40px]  leading-tight    ">
                 Share your Dot Lake Village Memories
               </h2>
             </div>
             <div className=" lg:pl-8 ">
-              <p className="  mb-12 text-white   lg:mt-24  lg:mx-16 mx-4 lg:text-2xl text-xl lg:leading-10 leading-8   ">
+              <p className="  mb-12 text-white   lg:mt-12  lg:mx-16 mx-4 lg:text-2xl text-xl lg:leading-10 leading-8   ">
                 If you have any memory from Dot Lake Village that you would like
                 to share, contact us: we are eager to share it with our people.
               </p>
-              <div className=" lg:block flex items-center justify-center  ">
+              <div className=" lg:block lg:ml-16 flex items-center justify-center  ">
                 <LinkButton to="#">Contact Us</LinkButton>
               </div>
             </div>
