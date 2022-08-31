@@ -13,7 +13,7 @@ export default function Archives() {
               className=" object-cover object-center "
             />
           </div>
-          <h1 className=" text-white lg:text-9xl text-[52px] text-center relative z-10 ">
+          <h1 className=" text-white lg:text-7xl text-[52px] text-center relative z-10 ">
             Archives
           </h1>
         </div>
