@@ -9,7 +9,6 @@ import { HomeSlider, links as sliderStyles } from "~/components/HomeSlider";
 export const links = () => [...sliderStyles()];
 export async function loader() {
   if (await cache.has("imageData")) return json(await cache.get("imageData"));
-
   const { data } = await supabase.storage.from("images").list("home-slider");
   const imagePaths = data.map((img) => `home-slider/${img.name}`);
   const imageLinks = await supabase.storage
@@ -20,7 +19,6 @@ export async function loader() {
     name: img.path.split("/")[1].split(".")[0],
     url: img.signedURL,
   }));
-
   await cache.set("imageData", imageData);
 
   return json(imageData);

@@ -1,4 +1,6 @@
+import { ClientOnly } from "remix-utils";
 import Layout from "./components/Layout";
+import NoDevTools from "./components/NoDevTools";
 import styles from "./styles/app.css";
 
 const {
@@ -38,12 +40,28 @@ export default function App() {
         <Layout>
           <Outlet />
         </Layout>
-
+        <ClientOnly>{() => <NoDevTools />}</ClientOnly>
         <ScrollRestoration />
-
         <Scripts />
-
         <LiveReload />
+      </body>
+    </html>
+  );
+}
+
+export function CatchBoundary() {
+  return (
+    <html>
+      <head>
+        <title>Oops!</title>
+        <Meta />
+        <Links />
+      </head>
+      <body className=" bg-dotOrange flex items-center justify-center w-screen h-screen ">
+        <h1 className=" text-7xl max-w-3xl text-center text-white ">
+          Ooops! Nothing is here.
+        </h1>
+        <Scripts />
       </body>
     </html>
   );
