@@ -19,7 +19,7 @@ export default function Archives() {
         </div>
       </section>
       <section>
-        <div className=" flex justify-center items-center lg:py-24 py-16 ">
+        <div className=" flex justify-center items-center lg:py-24 py-16 relative">
           <LinkButton to="images" normal={false}>
             Images
           </LinkButton>

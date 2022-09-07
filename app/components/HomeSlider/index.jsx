@@ -11,16 +11,16 @@ export const links = () => {
 
 const Slide = ({ portrait, landscape }) => {
   return (
-    <div className="w-full md:h-[550px] h-[250px] relative ">
+    <div className="w-3/4 md:h-[550px] h-[250px] relative ">
       <img
         className=" object-cover object-center "
         src={landscape.url}
         alt={landscape.name}
       />
-      <div className="absolute z-10 -top-1/2 right-9 h-96 hidden md:block ">
+      {/* <div className="absolute z-10 -top-1/2 right-9 h-96 hidden md:block ">
         {" "}
         <img className=" " src={portrait.url} alt={portrait.url} />
-      </div>
+      </div> */}
     </div>
   );
 };

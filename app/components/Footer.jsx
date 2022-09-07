@@ -30,7 +30,7 @@ const Footer = () => {
           <p className=" font-semibold text-xl mb-11 ">
             Dot Lake Village Council
           </p>
-          <p className=" mb-8 text-xl">P.O. Box #70488. Fairbanks AK 99707</p>
+          <p className=" mb-8 text-xl">PO Box 70488, Fairbanks AK 99707</p>
           <div className=" text-xl flex justify-between mb-8 gap-x-9">
             <p className="  ">Phone: (907) 882-2695</p>
             <p className="  ">Fax: (907) 882-5558</p>

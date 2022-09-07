@@ -40,7 +40,7 @@ export default function App() {
         <Layout>
           <Outlet />
         </Layout>
-        <ClientOnly>{() => <NoDevTools />}</ClientOnly>
+        {/* <ClientOnly>{() => <NoDevTools />}</ClientOnly> */}
         <ScrollRestoration />
         <Scripts />
         <LiveReload />
