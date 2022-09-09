@@ -18,7 +18,9 @@ const Footer = () => {
                 to share, contact us: we are eager to share it with our people.
               </p>
               <div className=" lg:block lg:ml-16 flex items-center justify-center  ">
-                <LinkButton to="#">Contact Us</LinkButton>
+                <LinkButton to="https://hipaa.jotform.com/222507788889174">
+                  Contact Us
+                </LinkButton>
               </div>
             </div>
           </div>
